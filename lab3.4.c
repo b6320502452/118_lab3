@@ -4,7 +4,7 @@ int main()
     long long n,i;
     int pri;
     scanf("%lld",&n);
-    for(n;n>0;n--)
+    for(n;n>=0;n--)
     {
         pri=1;
         for(i=2;i<n;i++)
@@ -17,7 +17,7 @@ int main()
         }
         if(pri==1)
         {
-            printf("%d",n);
+            printf("%lld",n);
             break;
         }
 
