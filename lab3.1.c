@@ -1,20 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int a[5][5],i,j;
+    int a[5][4],i,j,sum[5][1];
     for(i=0;i<5;i++)
     {
-        for(j=0;j<5;j++)
+        sum[i][0]=0;
+        for(j=0;j<4;j++)
         {
             scanf("%d",&a[i][j]);
+            sum[i][0]+=a[i][j];
         }
     }
-    for(i=0;i<5;i++)
+    int max=sum[0][0];
+    int pos=0;
+    for(i=1;i<5;i++)
     {
-        for(j=0;j<5;j++)
-        {
-            printf("%d ",a[i][j]);
-        }
-        printf("\n");
+        if(sum[i][0]>max)
+            pos=i;
     }
+    printf("%d %d",pos,sum[pos][0]);
 }
