@@ -1,14 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    long long n;
+    long long n,i;
+    int pri;
     scanf("%lld",&n);
     for(n;n>0;n--)
     {
-        if((n%2!=0&&n%3!=0&&n%5!=0&&n%7!=0)||n==7||n==5||n==3||n==2)
+        pri=1;
+        for(i=2;i<n;i++)
         {
-            printf("%lld",n);
+            if(n%i==0)
+            {
+                pri=0;
+                break;
+            }
+        }
+        if(pri==1)
+        {
+            printf("%d",n);
             break;
         }
+
     }
 }
