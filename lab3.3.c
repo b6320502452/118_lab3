@@ -3,14 +3,19 @@ int main()
 {
     int n,d=2;
     scanf("%d",&n);
-    while(n!=1)
+    if(n!=1)
     {
-        if(n%d==0)
+        while(n!=1)
         {
-            printf("%d\n",d);
-            n/=d;
+            if(n%d==0)
+            {
+                printf("%d\n",d);
+                n/=d;
+            }
+            else
+                d++;
         }
-        else d++;
+        printf("0");
     }
-    printf("0");
+    else printf("1\n0");
 }
