@@ -18,5 +18,5 @@ int main()
         if(sum[i][0]>max)
             pos=i;
     }
-    printf("%d %d",pos,sum[pos][0]);
+    printf("%d %d",pos+1,sum[pos][0]);
 }
